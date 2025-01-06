@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market - Canteen Automation System</title>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+        .cart-table {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        #message {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form class="container-fluid border border-5 bg-dark text-white text-center">
+        <a href="/home" style="text-decoration: none; color: white;">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Canteen Automation System</h1>
+                </div>
+            </div>
+        </a>
+    </form>
+
+<div class="row">
+    <form class="col-md-2">
+        <nav class="border border-5 navbar navbar-expand-md navbar-dark bg-dark">
+            <ul class="navbar-nav flex-md-column">
+                <li><a class="nav-link" href="/home">Home</a></li>
+                <li><a id="authButton" class="nav-link" href="/login">Log In</a></li>
+                <li><a id="ordersOnly" class="nav-link" href="/myOrders">My Orders</a></li>
+                <li><a id="productsOnly" class="nav-link active" href="/products">Products</a></li>
+                <li><a id="dashboardOnly" class="nav-link" href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </form>
+
+        <div class="col-md-5">
+            <div id="message"></div>
+            <div id="products" class="row">
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <h3>Cart</h3>
+            <table class="table table-striped cart-table">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="cart">
+                </tbody>
+            </table>
+            <button id=placeOrderButton class="btn btn-primary">Place The Order</button>
+        </div>
+</div>
+<script src="js\script.js"></script>
+</body>
+</html>

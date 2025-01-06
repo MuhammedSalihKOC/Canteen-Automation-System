@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Canteen Automation System</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<form class="container-fluid border border-5 bg-dark text-white text-center">
+    <a href="/home" style="text-decoration: none; color: white;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Canteen Automation System</h1>
+            </div>
+        </div>
+    </a>
+</form>
+
+<div class="row">
+    <form class="col-md-2">
+        <nav class="border border-5 navbar navbar-expand-md navbar-dark bg-dark">
+            <ul class="navbar-nav flex-md-column">
+                <li><a class="nav-link" href="/home">Home</a></li>
+                <li><a id="authButton" class="nav-link active" href="/profile">Profile</a></li>
+                <li><a id="ordersOnly" class="nav-link" href="/myOrders">My Orders</a></li>
+                <li><a id="productsOnly" class="nav-link" href="/products">Products</a></li>
+                <li><a id="dashboardOnly" class="nav-link" href="/dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </form>
+
+    <div class="w-50">
+        <h2 class="mb-4">Profile</h2>
+        <p><strong>Username:</strong> <span th:text="${username}"></span></p>
+        <p><strong>Role:</strong> <span th:text="${#strings.capitalize(role)}"></span></p>
+        <button id="logoutButton" class="btn btn-primary">Log Out</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
